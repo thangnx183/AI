@@ -6,7 +6,7 @@
 using std::cout;
 using std::endl;
 
-#define INPUT_DATA "input.txt"
+#define INPUT_DATA "demo.txt"
 
 int main(int argc, char **argv) {
 
@@ -17,5 +17,11 @@ int main(int argc, char **argv) {
     parseInput(INPUT_DATA, frame, pieces, numPieces);
 
     cout << (*frame);
+    frame->testFrame();
+    //pieces[2]->testFrame();
+    for(int i = 0; i < numPieces;i ++){
+      cout<<"*******   "<<i<<"   ****"<<endl;
+      pieces[i]->testFrame();
+    }
     return 0;
 }
